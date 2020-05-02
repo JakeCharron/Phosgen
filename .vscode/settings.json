@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "cdk-2.3.jar",
+        "/Users/jakecharron/Desktop/cdk-2.3.jar"
+    ]
+}
