@@ -1,4 +1,4 @@
-import org.openscience.cdk.CDKConstants;
+// import org.openscience.cdk.CDKConstants;
 import org.openscience.cdk.depict.DepictionGenerator;
 import org.openscience.cdk.exception.CDKException;
 import org.openscience.cdk.interfaces.IAtomContainer;
@@ -12,31 +12,46 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws Exception {
+        
+        String smiles = "C(=O)(Cl)Cl";
 
-        return2dImg("ClN(Cl)(Cl)C=O", "~/Desktop/", ".png");
+        boolean return2d = true;
+
+        IChemObjectBuilder bldr   = SilentChemObjectBuilder.getInstance();
+
+        SmilesParser smipar = new SmilesParser(bldr);
+
+        IAtomContainer mol = smipar.parseSmiles(smiles);
+
+
+        mol.setTitle(smiles);
+        if(return2d){
+            return2dImg("~/Desktop/", ".png", mol);
+        }else{
+            // return3d
+        }
 
         System.out.println("finished");
+
     }
 
 
-    public static void return2dImg(String smiles, String path, String imgFormat) throws CDKException, IOException {
-        IChemObjectBuilder bldr   = SilentChemObjectBuilder.getInstance();
-        SmilesParser smipar = new SmilesParser(bldr);
-
-        // Create a Smiles pareser that returns the bonds and the atoms
-        IAtomContainer mol = smipar.parseSmiles(smiles);
-
+    public static void return2dImg(String path, String imgFormat, IAtomContainer molecule) throws CDKException, IOException {
+        
         DepictionGenerator dptgen = new DepictionGenerator();
-        // size in px (raster) or mm (vector)
-        // annotations are red by default
+
         dptgen.withSize(200, 250)
                 .withMolTitle()
                 .withTitleColor(Color.DARK_GRAY);
-        dptgen.depict(mol)
-                .writeTo(path + smiles + imgFormat);
+
+        dptgen.depict(molecule)
+                .writeTo(path + molecule.getTitle() + imgFormat);
+
     }
 
+    // public static void return3dImg(String smiles, String path, String imgFormat){
 
 
 
+    
 }
