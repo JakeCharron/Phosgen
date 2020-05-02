@@ -1,0 +1,2 @@
+.xyz file gen checker
+ 
