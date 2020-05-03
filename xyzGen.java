@@ -9,6 +9,17 @@ import org.openscience.cdk.smiles.SmilesParser;
 import java.io.FileWriter; 
 import java.awt.*;
 
+// sample use
+//         String smiles = "C(=O)(Cl)Cl";
+//         String path = "~/Desktop/";
+//         String format = ".png";
+//         boolean return2d = true;
+
+//         // dipiction(smiles, path, format, false);
+
+//         xyzGen gen = new xyzGen(smiles, path, format, return2d);
+
+//         gen.dipiction();
 public class xyzGen {
 
     public String smiles;

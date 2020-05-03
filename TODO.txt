@@ -1,2 +1,2 @@
-.xyz file gen checker
- 
+.xyz file gen
+reformat java opengl code

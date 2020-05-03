@@ -1,6 +1,19 @@
 {
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "cdk-2.3.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "cdk-2.3.jar",
+            "/Users/jakecharron/Downloads/lwjgl-release-3.2.3-custom-2/lwjgl-glfw.jar",
+            "/Users/jakecharron/Downloads/lwjgl-release-3.2.3-custom-2/lwjgl-javadoc.jar",
+            "/Users/jakecharron/Downloads/lwjgl-release-3.2.3-custom-2/lwjgl-opengl-javadoc.jar",
+            "/Users/jakecharron/Downloads/lwjgl-release-3.2.3-custom-2/lwjgl-opengl.jar",
+            "/Users/jakecharron/Downloads/lwjgl-release-3.2.3-custom-2/lwjgl.jar",
+            "jars/cdk-2.3.jar",
+            "jars/lwjgl-glfw.jar",
+            "jars/lwjgl-opengl.jar"
+        ],
+        "exclude": [
+            "jars/lwjgl.jar"
+        ]
+    }
 }
