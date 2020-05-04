@@ -10,7 +10,10 @@
             "/Users/jakecharron/Downloads/lwjgl-release-3.2.3-custom-2/lwjgl.jar",
             "jars/cdk-2.3.jar",
             "jars/lwjgl-glfw.jar",
-            "jars/lwjgl-opengl.jar"
+            "jars/lwjgl-opengl.jar",
+            "jars/Jmol.jar",
+            "/Users/jakecharron/Desktop/JmolLib.jar",
+            "jars/JmolLib.jar"
         ],
         "exclude": [
             "jars/lwjgl.jar"

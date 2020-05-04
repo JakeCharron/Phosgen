@@ -43,6 +43,8 @@ public class xyzGen {
     public void dipiction() throws Exception{
         if (is2d){
 
+            System.out.println(path + imgFormat);
+
             IChemObjectBuilder bldr = SilentChemObjectBuilder.getInstance();
 
             SmilesParser smipar = new SmilesParser(bldr);
